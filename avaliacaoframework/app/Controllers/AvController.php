@@ -41,7 +41,7 @@ class AvController extends AbstractControllers{
         }
         $databaseConnection = DatabaseConnection::start()->getPDO();
         $users = $databaseConnection
-                ->query("SELECT * FROM car WHERE name_car = '{$valueOfVariable}';")/*retorna todos os carros com determinado nameCar*/
+                ->query("SELECT * FROM car WHERE name = '{$valueOfVariable}';")/*retorna todos os carros com determinado nameCar*/
                 ->fetchAll();
         view($users);
 
@@ -81,7 +81,7 @@ class AvController extends AbstractControllers{
         }
         $databaseConnection = DatabaseConnection::start()->getPDO();
         $users = $databaseConnection
-                ->query("SELECT * FROM seller WHERE name_seller = '{$valueOfVariable}';")/*retorna todos os vendedores com o nome nameSeller*/
+                ->query("SELECT * FROM seller WHERE name = '{$valueOfVariable}';")/*retorna todos os vendedores com o nome nameSeller*/
                 ->fetchAll();
         view($users);
 
@@ -136,7 +136,7 @@ class AvController extends AbstractControllers{
         }
         $databaseConnection = DatabaseConnection::start()->getPDO();
         $users = $databaseConnection
-                ->query("SELECT * FROM buyer WHERE name_buyer = '{$valueOfVariable}';")/*retorna todos os compradores com o nome nameBuyer */
+                ->query("SELECT * FROM buyer WHERE name = '{$valueOfVariable}';")/*retorna todos os compradores com o nome nameBuyer */
                 ->fetchAll();
         view($users);
 
