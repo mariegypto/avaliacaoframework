@@ -20,13 +20,14 @@ class RouteProcess{
         switch($processServerElements->getVerb()){
             case'GET':
                 switch($processServerElements->getRoute()){
-                   case '/hello-world':
-                    return (new HelloWorldController)->execute(); 
-                   break;
-
-                   case '/train-query':
-                    return(new TrainQueryController)->execute();
+                    case '/hello-world':
+                        return (new HelloWorldController)->execute(); 
                     break;
+
+                    case '/train-query':
+                        return(new TrainQueryController)->execute();
+                    break;
+                    
                     case '/car':
                         return (new AvController)->getCar();
                     break;
@@ -35,7 +36,7 @@ class RouteProcess{
                         return (new AvController)->getCarId();
                     break;
 
-                    case '/car/name-car':
+                    case '/car/name':
                         return (new AvController)->getCarName();
                     break;
 
@@ -47,7 +48,7 @@ class RouteProcess{
                         return (new AvController)->getSellerId();
                     break;
 
-                    case '/seller/name-seller':
+                    case '/seller/name':
                         return (new AvController)->getSellerName();
                     break;
 
@@ -63,7 +64,7 @@ class RouteProcess{
                         return (new AvController)->getBuyerId();
                     break;
 
-                    case '/buyer/name-buyer':
+                    case '/buyer/name':
                         return (new AvController)->getBuyerName();
                     break;
 
