@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS car;
-CREATE DATABASE car;
+DROP DATABASE IF EXISTS avaliacaoframework;
+CREATE DATABASE avaliacaoframework;
 
-USE car;
+USE avaliacaoframework;
 
 DROP TABLE IF EXISTS sells;
 DROP TABLE IF EXISTS buyer;
